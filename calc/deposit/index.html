@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Contribution</title>
+    <title>deposit</title>
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -28,7 +28,7 @@
         <div class="navbar-collapse collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="..\contribution">Contribution</span></a>
+                    <a class="nav-link" href="..\deposit">Deposit</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="..\mortgage">Mortgage</a>
@@ -76,7 +76,7 @@
                 </div>
 
                 <h2 class="m-2"><small id="investments"></small></h2>
-                <h2 class="m-2"><small id="contribution"></small></h2>
+                <h2 class="m-2"><small id="deposit"></small></h2>
             </div>
 
             <!-- Ad block -->
@@ -105,13 +105,13 @@
         var percent = Number(document.getElementById('txt_percent').value) / 100;
         var years = Number(document.getElementById('txt_years').value);
 
-        var contribution = 0;
+        var deposit = 0;
         for (var i = 0; i < (years * 12); i++) {
-            contribution += (contribution * (percent / 12)) + step;
+            deposit += (deposit * (percent / 12)) + step;
         }
 
         document.getElementById('investments').innerHTML = 'Investments: ' + formatter.format(String(Math.trunc(step * (years * 12))));
-        document.getElementById('contribution').innerHTML = 'Contribution: ' + formatter.format(String(Math.trunc(contribution)));
+        document.getElementById('deposit').innerHTML = 'deposit: ' + formatter.format(String(Math.trunc(deposit)));
     }
 
     calculate();
